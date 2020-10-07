@@ -1,0 +1,8 @@
+1.  Edit variables.tfvars for your source IP address
+
+2.  terraform init
+
+3.  terraform apply command as shown below, specifying the *tfvars file:
+
+$ terraform apply -var-file=variables.tfvars -auto-approve
+
