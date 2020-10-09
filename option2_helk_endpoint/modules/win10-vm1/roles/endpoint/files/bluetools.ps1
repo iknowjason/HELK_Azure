@@ -1,11 +1,11 @@
 
-# Upload Sysmon
+# Download Sysmon
 (New-Object System.Net.WebClient).DownloadFile('https://github.com/iknowjason/BlueTools/blob/main/Sysmon.zip?raw=true', 'C:\terraform\Sysmon.zip')
 
-# Upload winlogbeat
+# Download winlogbeat
 (New-Object System.Net.WebClient).DownloadFile('https://github.com/iknowjason/BlueTools/blob/main/winlogbeat-7.9.2-windows-x86_64.zip?raw=true', 'C:\terraform\winlogbeat.zip')
 
-# Upload configuration zip file, which contains SwiftOnSecurity sysmon config and winlogbeat config
+# Download configuration zip file, which contains SwiftOnSecurity sysmon config and winlogbeat config
 (New-Object System.Net.WebClient).DownloadFile('https://github.com/iknowjason/BlueTools/blob/main/configs.zip?raw=true', 'C:\terraform\configs.zip')
 
 # Expand the Sysmon zip archive
