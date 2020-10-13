@@ -32,7 +32,7 @@ https://<IP ADDRESS>
 * Azure subscription
 * Terraform:  Tested on v0.13.4
 * Ansible:  Tested on 2.9.6
-* A version of Linux that will run velociraptor binary (x64) - Note:  The terrraform deployment system runs a version of Velociraptor from the binary releases page in order to build the configuration, which is copied to the actual Velociraptor server and client.  If you are running other than Ubuntu with x64 (i.e., MacOS), simply copy the binary release for your platform into the modules/velociraptor directory.  This is the binary release that is included in this deployment, so just make sure that it runs with your native OS:  velociraptor-v0.5.0-1-linux-amd64
+
 
 ## Installation Steps
 
