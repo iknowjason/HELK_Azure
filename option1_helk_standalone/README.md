@@ -4,7 +4,7 @@
 Automated Terraform deployment of HELK in Azure!  This option only builds HELK (no endpoints) and uses the recommended installation with an Ubuntu Linux VM.  This option deploys an Azure VM with hardware for Option #4 and installs HELK option #4.
 
 # Quick Fun Facts:
-* Deploys one (1) Ubuntu Linux 18.04 HELK Server
+* Deploys one (1) Ubuntu Linux 18.04 HELK Server ~ Deploys HELK with Hardware and automated deployment #4 option
 * Uses Terraform templates to automatically deploy in Azure with VMs
 * Terraform VM modules are flexible, allowing you to add your own new VMs in Azure
 * Terraform templates write Ansible Playbook configuration, which can be customized
