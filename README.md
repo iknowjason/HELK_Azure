@@ -1,6 +1,6 @@
 
 # Overview:  HELK_Azure
-Automated Terraform deployment of HELK in Azure!  
+Automated Terraform deployment of HELK in Azure using Terraform templates!  
 
 # Option 1:  HELK Standalone
 This option automatically deploys HELK in Azure VM infrastructure with the Option #4 HELK deployment and hardware.  For this option, navigate to the Option 1 directory for instructions.
