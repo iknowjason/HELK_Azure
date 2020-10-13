@@ -1,4 +1,4 @@
-![](images/Azure_HELK_Option1.png)
+![](../images/Azure_HELK_Option1.png)
 
 # Overview:  HELK_Azure with Option 1
 Automated Terraform deployment of HELK in Azure!  This option only builds HELK (no endpoints) and uses the recommended installation with an Ubuntu Linux VM.  This option deploys an Azure VM with hardware for Option #4 and installs HELK option #4.
