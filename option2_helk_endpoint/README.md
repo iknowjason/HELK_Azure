@@ -4,7 +4,8 @@
 Automated Terraform deployment of HELK in Azure!  Automated deployment of one HELK server with one registered Windows 10 endpoint in Azure VM infrastructure.  A collection of Terraform and Ansible scripts that automatically (and quickly) deploys a small HELK R&D lab.
 
 # Quick Fun Facts:
-* Deploys one (1) Ubuntu Linux 18.04 HELK Server ~ Deploys HELK with Hardware and automated deployment #4 option
+* Deploys one (1) Ubuntu Linux 18.04 HELK Server
+* Automatically deploys this HELK install option:  Option 4: 8GB includes KAFKA + KSQL + ELK + NGNIX + SPARK + JUPYTER + ELASTALERT
 * Deploys one (1) Windows 10 Professional endpoint with Sysmon (SwiftOnSecurity) and Winlogbeat
 * Windows endpoint is automatically configured to use HELK configuration + Kafka Winlogbeat output to send logs to HELK
 * Terraform VM modules are flexible, allowing you to add your own new VMs in Azure
