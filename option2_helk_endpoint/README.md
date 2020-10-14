@@ -26,7 +26,7 @@ Automated Terraform deployment of HELK in Azure!  Automated deployment of one HE
 
 # Remote Access (After Deployment)
 * Windows 10 VM:  Change into the modules/win10-vm1 directory and view contents of hosts.cfg.  The second line should show the IP address of the Windows 10 VM.  Just RDP to it with Admin credentials above.
-* HELK Server:  View contents of hosts.cfg.  The second line should show the IP address of the HELK server that is provisioned a public IP from Azure.  You can SSH to the host from within that directory:
+* HELK Server:  Change into the modules/helk directory and iew contents of hosts.cfg.  The second line should show the IP address of the HELK server that is provisioned a public IP from Azure.  You can SSH to the host from within that directory:
 ```
 $ ssh -i ssh_key.pem helk@<IP ADDRESS>
 ```
