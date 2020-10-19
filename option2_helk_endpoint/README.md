@@ -11,6 +11,7 @@ Automated Terraform deployment of HELK in Azure!  Automated deployment of one HE
 * Terraform VM modules are flexible, allowing you to add your own new VMs in Azure
 * Terraform templates write Ansible Playbook configuration, which can be customized
 * **Deployment Time:**  Approximately 15 minutes
+* **Approximate Monthly Cost:** $104.59 per month
 * Azure Network Security Groups (NSGs) can whitelist your source prefix, for added security
 * The following ports are opened through Azure NSGs for ingress TCP traffic: RDP (3389), WinRM HTTP (5985), WinRM HTTPS (5986), SSH (22), HTTPS (443), Spark (8080), KQL (8088), Zookeeper (2181)
 
