@@ -138,3 +138,9 @@ This should start the Terraform automated deployment plan
 $ cd HELK_Azure/option2_helk_endpoint/deploy
 $ ./destroy.sh
 ```
+
+# Running APT Simulator Tools
+This project includes three security tools to run APT simulations for generating forensic artifacts in an automated way.  Here is a quick walkthrough on the three tools that are automatically deployed.
+1.  Atomic Red Team (ART)
+2.  Elastic Detection Rules RTA (Red Team Attacks) scripts
+3.  APTSimulator
