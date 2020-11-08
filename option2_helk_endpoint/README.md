@@ -11,6 +11,7 @@ Automated Terraform deployment of HELK in Azure!  Automated deployment of one HE
 * Automatically deploys this HELK install option:  Option 4: 8GB includes KAFKA + KSQL + ELK + NGNIX + SPARK + JUPYTER + ELASTALERT
 * Deploys one (1) Windows 10 Professional endpoint with Sysmon (SwiftOnSecurity) and Winlogbeat
 * Windows endpoint is automatically configured to use HELK configuration + Kafka Winlogbeat output to send logs to HELK
+* Windows endpoint includes Atomic Red Team (ART), Elastic Detection RTA, and APTSimulator
 * Terraform VM modules are flexible, allowing you to add your own new VMs in Azure
 * Terraform templates write Ansible Playbook configuration, which can be customized
 * **Deployment Time:**  Approximately 15 minutes
