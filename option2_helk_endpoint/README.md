@@ -139,8 +139,60 @@ $ cd HELK_Azure/option2_helk_endpoint/deploy
 $ ./destroy.sh
 ```
 
-# Running APT Simulator Tools
-This project includes three security tools to run APT simulations for generating forensic artifacts in an automated way.  Here is a quick walkthrough on the three tools that are automatically deployed.
-1.  Atomic Red Team (ART)
-2.  Elastic Detection Rules RTA (Red Team Attacks) scripts
-3.  APTSimulator
+# Running APT Simulation Tools
+This project includes three security tools to run APT simulations for generating forensic artifacts in an automated way.  Here is a quick walkthrough on the three tools that are automatically deployed.  To test efficacy of the detection solution, it is recommended to disable Windows Defender real-time protection setting.  This will allow the simulation tools to run in an environment that will allow them to fully execute, allowing you to look deeper at the forensic artifacts.
+
+**1.  Atomic Red Team (ART)**
+
+The Atomic Red Team scripts are downloaded from the official Github repo [1] and the Invoke-AtomicRedTeam execution framework is automatically downloaded and imported from the following repo [2].  This allows you to more easily run atomic tests and the modules are imported into the powershell session everytime you launch a powershell session.  This is controlled from the following powershell environment script:
+
+```C:\Users\VAdmin\Documents\WindowsPowerShell\Microsoft.Powershell_profile.ps1```
+
+Now that this is out of the way, let's show how to run an atomic test for ART!
+
+From a powershell session, simply run:
+```PS C:\ > Invoke-AtomicTest <ATOMIC_TEST> -PathToAtomicsFolder C:\terraform\ART\atomic-red-team-master\atomics```
+
+
+The atomics are in the main project directory path of ```C:\terraform\ART\atomic-red-team-master\atomics```.  Browse through them to find which atomic test you want to run.
+
+
+Example of running T1007: 
+
+```PS C:\Users\VAdmin> Invoke-AtomicTest T1007 -PathToAtomicsFolder C:\terraform\ART\atomic-red-team-master\atomics```
+
+[1] https://github.com/redcanaryco/atomic-red-team
+
+[2] https://github.com/redcanaryco/invoke-atomicredteam
+
+**2.  Elastic Detection Rules RTA (Red Team Attacks) scripts**
+
+In June of 2020, Elastic opens sourced their detection rules, including Python attack scripts through the Red Team Automation (RTA) project.  The following repo [3] is automatically downloaded and extracted using Terraform and Ansible scripts.  To run them, launch a cmd or powershell session and use python to run each test from the following directory:
+
+Change into the directory:  
+
+```C:\terraform\Elastic_Detections\detection-rules-main```
+
+Run each python script test that you wish.  Each test is in the RTA directory and you invoke the test by removing the *.py (TTPs are referenced as a name by just removing the last *.py from the script):
+
+```PS C:\terraform\Elastic_Detections\detection-rules-main> python -m rta <TTP_NAME>```
+
+Example of 'smb_connection' ttp:
+
+```PS C:\terraform\Elastic_Detections\detection-rules-main> python -m rta smb_connection```
+
+You can browse all TTPs in the 'rta' sub-directory
+
+[3] https://github.com/elastic/detection-rules
+
+**3.  APTSimulator**
+
+The APTSimulator tool [4] is automatically downloaded.  Simply extract the Zip archive and supply the zip password of 'apt'.
+
+```C:\terraform\APTSimulator.zip```
+
+Invoke a cmd prompt and run the batch file script:
+
+```C:\terraform\ATPSimulator\APTSimulator\APTSimulator.bat```
+
+[4] https://github.com/NextronSystems/APTSimulator
